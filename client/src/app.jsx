@@ -22,7 +22,7 @@ export default function App() {
         body: JSON.stringify({ topic, tone, audience, product }),
       });
       const data = await res.json();
-      setPost(data.post);
+      setPost(data);
     } catch (err) {
       setPost("Error: " + err.message);
     } finally {
